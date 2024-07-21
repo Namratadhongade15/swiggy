@@ -1,0 +1,202 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<title>
+			overflow
+		</title>
+		<style>
+			*{
+				margin:0%;
+				padding:0%;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div style="color:black;">
+			<div style="background-color:white;position:fixed;width:100%;">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAbFBMVEX////zgCj29vbzfiHydQD0iEP96N7ycAD++vfzfBv71sLxcgD5ya/ybQD//fz+8uzzeQ73roP85Nf5xKf2pnb4vp33sYj1lVjzhDL4uZb97OT2o3Dzhjj0iT/0kU/1mmD728v2n2n60LnxZQDI18t+AAAF4UlEQVR4nO2c3ZKiMBBGZYNCUCGAojCo6L7/O67oOOMoaLS/Zrq2cm52LqwKZ/ND0t1h9Gf03/Bn5GRk4mSk4mSk4mSk4mSk4mSk4mSk4mSk4mSk4mSk4mSk4mSk4mSk4mSk4mSk4mSk4mSk4mSk4mSk4mSk4mSk4mSkMoBMPGlmy6JIi2I5i7KQsSVmmTgrV+N67XmqxfPW9XhVRFytscpkH0rrs8Unx7+11mbfsLTHJxMuzdx8a/xAB0FR4ZtkkomTcu73mJzx/RQ+f3hkktz4j0zOOqacYJvlkAmj1eNeuTDdHBJkwwwyVeEZG5V27kzTDNgyXibb9U37zrG2BS7UcJnD2LZbPjtnnceottEyS0+/5HK0USVqVQPLlHYz/wdKo2ywMuXzBbmLYImxgcrkr02Xb+aYeYOUidavj7GLDWRNA8pk21fn/jfKR7xvcDLJx7uDrEVvANMGJhMu3++XlmlBfwaYTFbTZDxDnzYomWRBGWQtekUeaCiZ6L03zDVqSX0IkExitZKp+TTo/51eUc8DIJlobvWfn4wmD6x1KUIm3th0jD87/nTWPx71ntg1GJnMqmOmTSvTv1AobyZBZm+1lE2jxzKeX9AWNIhMbDdjnsroLW1TA5GJAoyMZ2jjDCJjuSt7LuPTjmkQGc9u6/9cRu9IcU6ETGW5K3suo1Tz2zIzmIwXkHabCJkCJ+PnlEmDkNnjZExK2QQgZMaWR38bmY//RkYZ77eHWQiRUcb368Xht98z4eYlGV//+LnS+qgRBPW+mDW/v2t+TSYptyqYf+F7492iyA9NVtHDM4PLjMKkmkwmWcvx36pKkiSUE2uOX5oznAy+mnGCkNlZvjR94kHyKUNuZ9R40sF51gBUht1oejrw7zCq3u7TPMoAeWeETEYJzLYFKMb4wTqNyDoImZgamT1JGU1Oo0NOmrYvmieYD2I9DUQmpQeaT+hcgIxldOYpIuJmo78YGbOgrQEYGWqiSZTMEjNpjIhhNrGLzz7DJ+Y0QCmN9ysArlEisgDv1pncuGwbETIZYnEWkmyyzGk+waTEpwDJxDmga9bEDQAsdZ7RN5vUVBOwqCEl2+g99SFg5SYNfT2jjjKcTGWXpO1H1eSCelyJ1ttlgBcZ8igDykxsgzQ9CKpqOrIkbWlUTS/TBMpUK0rX+OSaJmzBaW6Zde5kDqifRcrEhFnjU7cyLdC65kS93TV/EXdPsBXnlTGnO2Y9MHcM/GJDuRr30y8zhdxAG/TSaW+ogBpj+mRQmb5SLuVh7jcNKhP2yBCLmb6QIKNr0MUzxkunVdZEh8MhirLL7O6R8UvQRS0emSxf7Fbb8WZTH9mMt7u0aZ+3W4Z+wrzAIBMftmtPa/39xmn/nsW9MoBd2RkGmWbTcbfRbyt8OmXMDnbxlEGm8yKN6ZNRa1wOmmPOdNX6nAL8XTL6A9cwh8yk42BzlrkPrqk18LI2y2rWceY8lfh1yBjY7B8xyXScOXtk9BZ2F3jE9Z7JbXtmjrx0ziQT3nXNaV98JxNQb8z8hGk709zKnDJ8t7tmvYF+24Btb3b7rlHecYM2m3IOMsaN5s1ze8qk+5tRFiyRs3/EKNPczg9lbjoLuI/5hO8IsHiSFtDrBt0kn0zyuNJBKdznJi4wnjSjh2kBTSqU74ZRJnyUT8edyK7gjAFUq96+Ud6BoUHWgMahN5KuU/iEGTHLxH0DDZGM6YA31FTtugcaJEx+D3PcLOos38R8/uMe7iBg2SHjA74w0Ql7RPP+QprZsUyY0QAyVX3TN3rL8AG9M/yx5pvSWl3z3dUYIHBeXtsct2R8X9IcQCa8Xp+pNaUPGSKlMfm+MmeoxX4PGSQ/8/W5EMbJ3zKIzKVOUHkNazvDZM7OsXSlObbKVwyUBjx9LgxRHvOQoXKa0VpjChceMViCNjcL9jYGkwlzzkX5jPssuFScjFScjFScjFScjFScjFScjFScjFScjFScjFScjFScjFScjFScjFScjFScjFT+L5l/bLlK5hGShO4AAAAASUVORK5CYII="style="width:5.5%;padding-left:5%;float:left;">
+				<p style="padding:2%;font-size:18px;margin-left:9%;">
+					<b>HELP</b>
+					
+				<span>
+					<i class="ri-search-line"style="margin-left:40%;font-size:18px;"></i>
+				</span>
+				<span style="font-size:18px;">
+					Search
+				</span>
+				<span>
+					<i class="ri-discount-percent-line"style="margin-left:5%;"></i>
+				</span>
+				<span>
+					Offer<sup style="font-size:10px;color:#fc8019;"><b>NEW</sup></b>
+				</span>
+				<span>
+					<i class="ri-donut-chart-line"style="margin-left:5%;color:#fc8019;"></i>
+				</span>
+				<span style="color:#fc8019;">
+					Help
+				</span>
+				<span>
+					<i class="ri-user-3-line"style="margin-left:5%;"></i>
+				</span>
+				<span>
+					Sign Up
+				</span>
+				<span>
+					<i class="ri-shopping-bag-2-line"style="margin-left:5%;font-size:18px;"></i>
+				</span>
+				<span style="font-size:20px;">
+					cart
+				</span>
+				
+				</p>
+			</div>
+			<div style="background-color:#016795;width:92.5%;height:800px;padding:3.5%;">
+				<p style="font-size:40px;color:white;margin-left:5%;padding:4%;padding-bottom:0%;">
+					Help & Support
+				</p>
+				<p style="font-size:20px;color:white;margin-left:5%;">
+					Let's take a step ahead and help you better.
+				</p>
+				<div style="background-color:#FAF9F6;width:1200px;height:550px;margin:6%;padding-top:4%;">
+					<div style="background-color:lightgrey;width:300px;height:450px;margin:5%;padding-top:0%;float:left;overflow:hidden;">
+						<p style="padding:20%;font-size:20px;padding-bottom:15%;padding-left:6.5%;">
+							<a href="Swiggy.html"target="_blank"style="text-decoration:none;color:black;font-size:25px;">
+									<b>Partner Onboarding</b>
+							</a>
+						</p>
+						<p style="padding-left:35%;font-size:20px;">
+							<a href="Swiggy2.html"target="_blank"style="text-decoration:none;color:black;font-size:25px;">
+									<b>Legal</b>
+								</a>
+						</p>
+						<p style="padding-left:35%;font-size:20px;padding-top:15%;">
+							<a href="Swiggy3.html"target="_blank"style="text-decoration:none;color:black;font-size:25px;">
+									<b>FAQs</b>
+							</a>
+						</p>
+						
+					</div>
+					<div style="padding:5%;font-size:30px;overflow:auto;height:380px;width:40%;">
+							<b>FAQs</b>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:8%;">
+							What is Swiggy Customer Care Number?								
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							I want to explore career opportunities with Swiggy								
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							I want to provide feedback
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							Can I edit my order?
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							I want to cancel my order
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							Will Swiggy be accountable for quality/quantity?
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							Is there a minimum order value?
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							Do you charge for delivery?
+							
+						</p>
+						<hr>
+						
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							How long do you take to deliver?
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							What are your delivery hours?
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							Can I order from any location?
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							Is single order from many restaurants possible?
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							Do you support bulk orders?
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							Can I order in advance?
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							Can I change the address / number?
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							Did not receive OTP?
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							Did not receive referral coupon?
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							Deactivate my account
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							Unable to view the details in my profile
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							What is Swiggy Money?
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							Do you accept Sodexo, Ticket Restaurant etc.?
+							
+						</p>
+						<hr>
+						<p style="font-size:20px;padding:3%;color:grey;margin-top:3%;">
+							I want an invoice for my order
+							
+						</p>
+						<hr>
+						
+					</div>
+				
+			</div>
+			
+			 
+			</div>
+			
+			
+		</div>
+	</body>
+</html>

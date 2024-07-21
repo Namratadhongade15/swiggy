@@ -1,0 +1,621 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<title>
+			Swiggy
+		</title>
+		<style>
+			*{
+				margin:0%;
+				padding:0%;
+			}
+			.p{
+				display:none;
+				font-size:25px;
+			}
+			.div{
+				margin-top:2%;
+				width:300px;
+				height:300px;
+				
+				float:left;
+				margin-left:2%;
+			}
+			.div:hover {
+				
+				width:300px;
+				display:block;
+				margin-right:2%;
+
+				box-Shadow:10px 0px 50px black;
+			}
+			.p1{
+				display:none;
+				font-size:25px;
+			}
+			.div1{
+				margin-top:2%;
+				width:300px;
+				height:300px;
+				
+				float:left;
+				margin-left:4%;
+			}
+			.div1:hover {
+				
+				width:300px;
+				display:block;
+				box-Shadow:10px 0px 50px black;
+				margin-left:2%;
+				margin-right:2%;
+			}
+			.p2{
+				display:none;
+				font-size:25px;
+			}
+			.div2{
+				margin-top:2%;
+				width:300px;
+				height:300px;
+				margin-left:3%;
+				float:left;
+				
+			}
+			.div2:hover  {
+				
+				width:300px;
+				display:block;
+				box-Shadow:10px 0px 50px black;
+				
+				margin-right:4%;
+			}
+			.p3{
+				display:none;
+				font-size:25px;
+			}
+			.div3{
+				margin-top:2%;
+				width:300px;
+				height:300px;
+				
+				float:left;
+				margin-left:3%;
+			}
+			.div3:hover {
+				
+				width:300px;
+				display:block;
+				box-Shadow:10px 0px 50px black;
+				margin-left:4%;
+				margin-right:4%;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="color:black;">
+			<div style="background-color:white;position:fixed;width:100%;">
+				<img src="data:image/png;base64,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"style="width:5.5%;padding-left:5%;float:left;">
+				<p style="padding:2%;font-size:18px;margin-left:9%;">
+					<b>HELP</b>
+					
+				<span>
+					<i class="ri-search-line"style="margin-left:40%;font-size:18px;"></i>
+				</span>
+				<span style="font-size:18px;">
+					Search
+				</span>
+				<span>
+					<i class="ri-discount-percent-line"style="margin-left:5%;"></i>
+				</span>
+				<span>
+					Offer<sup style="font-size:10px;color:#fc8019;"><b>NEW</sup></b>
+				</span>
+				<span>
+					<i class="ri-donut-chart-line"style="margin-left:5%;color:#fc8019;"></i>
+				</span>
+				<span style="color:#fc8019;">
+					Help
+				</span>
+				<span>
+					<i class="ri-user-3-line"style="margin-left:5%;"></i>
+				</span>
+				<span>
+					Sign Up
+				</span>
+				<span>
+					<i class="ri-shopping-bag-2-line"style="margin-left:5%;font-size:18px;"></i>
+				</span>
+				<span style="font-size:20px;">
+					cart
+				</span>
+				
+				</p>
+			</div>
+			<div style="padding-top:10%;font-size:30px;margin-left:5%;">
+				<b>What's on your mind?</b>
+			</div>
+			
+			<div style="width:100%;overflow-x:scroll;">
+			<div style="width:2000px;height:80px;">
+				<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/Biryani_2.png"style="width:10%;margin-left:5%;float:left;">
+				<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029856/PC_Creative%20refresh/3D_bau/banners_new/Pizza.png"style="width:10%;margin-left:2%;float:left;">
+				<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Rolls.png"style="width:10%;float:left;margin-left:2%;">
+				<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png"style="width:10%;float:left;margin-left:2%;">
+				<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029844/PC_Creative%20refresh/3D_bau/banners_new/Chole_Bature.png"style="width:10%;float:left;margin-left:2%;">
+				<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029848/PC_Creative%20refresh/3D_bau/banners_new/Chinese.png"style="width:10%;float:left;margin-left:2%;">
+				<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029854/PC_Creative%20refresh/3D_bau/banners_new/Pav_Bhaji.png"style="width:10%;float:left;margin-left:2%;">
+				<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Shakes.png"style="width:10%;margin-left:2%;">
+				
+			</div>
+			</div>
+				<hr style="margin:4%;margin-bottom:3%;color:grey;">
+				<div style="font-size:30px;margin-left:5%;">
+					<b>Top restaurant chains in Pune</b>
+				</div>
+				
+					<div class="div">
+						<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/490629b70f89da8a5b93fc199ece335e"style="height:200px;width:300px;object-fit:cover;object-position:60%  60%;margin-left:1%;">
+					<p style="font-size:30px;color:#393939;margin-top:2%;padding-left:6%;">
+							<b>Pizza Hut</b>
+					</p>
+					<p style="font-size:20px;padding-left:6%;">
+							<b>3.8 • 30-35 mins</b>
+					</p>
+					<p style="font-size:18px;color:grey;padding-left:6%;">
+							Pizzas Punawale
+					</p>
+					</div>
+					<div class="div1">
+					
+						<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597"style="height:200px;width:300px;object-fit:cover;object-position:120%  50%;margin-left:1%;margin-top:1%;">
+						<p style="font-size:30px;color:#393939;margin-top:2%;padding-left:6%;">
+							<b>Chinese Wok</b>
+						</p>
+						<p style="font-size:20px;padding-left:6%;">
+							<b>3.7 • 60-65 mins</b>
+						</p>
+						<p style="font-size:18px;color:grey;padding-left:6%;">
+							Chinese, Asian, Tibetan, Desserts 
+						</p>
+					</div>
+					<div class="div1">
+					
+						<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/noc7ieivirqxtpujhsgl"style="height:200px;width:300px;object-fit:cover;object-position:10%  35%;margin-left:1%;margin-top:1%;">
+						<p style="font-size:30px;color:#393939;margin-top:2%;padding-left:6%;">
+							<b>UBQ by Barbeque </b>
+						</p>
+						<p style="font-size:20px;padding-left:6%;">
+							<b>4 • 50-55 mins</b>
+						</p>
+						<p style="font-size:18px;color:grey;padding-left:6%;">
+							North Indian, Barbecue, Biryani, 
+						</p>
+					</div>
+					<div class="div1">
+					
+						<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/iydxtay1mnne2ktw7txe"style="height:200px;width:300px;object-fit:cover;object-position:10%  70%;margin-left:1%;margin-top:1%;">
+						<p style="font-size:30px;color:#393939;margin-top:2%;padding-left:6%;">
+							<b>Barbeque Nation </b>
+						</p>
+						<p style="font-size:20px;padding-left:6%;">
+							<b>3.7 • 60-65 mins</b>
+						</p>
+						<p style="font-size:18px;color:grey;padding-left:6%;">
+							North Indian, Barbecue, Biryani, 
+						</p>
+					</div>
+					<div style="font-size:30px;margin-left:5%;margin-top:28%;">
+					<b>Restaurants with online food delivery in Pune</b>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:100px;border-radius:20%;margin:5%;margin-top:1.5%;margin-right:0%;float:left;">
+					<p style="text-align:center;margin-top:6%;font-size:18px;">
+						Filter  <i class="ri-equalizer-line"></i>
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:100px;border-radius:20%;margin-left:1%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:6%;font-size:18px;">
+						Sort By  <i class="ri-sort-asc"></i>
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:110px;border-radius:20%;margin-left:1%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:6%;font-size:18px;">
+						Fast Delivery
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:150px;border-radius:20%;margin-left:1%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:6%;font-size:18px;">
+						New On Swiggy
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:110px;border-radius:20%;margin-left:1%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:6%;font-size:18px;">
+						Ratings 4.0+
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:100px;border-radius:20%;margin-left:1%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:6%;font-size:18px;">
+						Pure Veg
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:100px;border-radius:20%;margin-left:1%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:6%;font-size:18px;">
+						Offers
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:150px;border-radius:20%;margin-left:1%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:6%;font-size:18px;">
+						Rs.300-Rs.600
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:150px;border-radius:20%;margin-left:1%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:6%;font-size:18px;">
+						Less Then Rs.300  
+					</p>
+				</div>
+				
+				
+				
+				
+
+				
+				<div class="div2">
+					
+						<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/5d0c595a-dfb2-472b-8ca0-f4701adaa38d_752535.JPG"style="height:200px;width:300px;object-fit:cover;object-position:10%  35%;margin-top:1%;">
+						<p style="font-size:30px;color:#393939;margin-top:2%;padding-left:6%;">
+							<b>KFC </b>
+						</p>
+						<p style="font-size:20px;padding-left:6%;">
+							<b>3.9 • 20-25 mins</b>
+						</p>
+						<p style="font-size:18px;color:grey;padding-left:6%;">
+							Burgers, Biryani, American, Snacks, 
+						</p>
+					</div>
+					<div class="div3">
+					
+						<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/1/fedaee6f-c5e9-4f19-8188-93627e6d6776_237669.JPG"style="height:200px;width:300px;object-fit:cover;object-position:10%  35%;margin-left:1%;margin-top:1%;">
+						<p style="font-size:30px;color:#393939;margin-top:2%;padding-left:6%;">
+							<b>McDonald's </b>
+						</p>
+						<p style="font-size:20px;padding-left:6%;">
+							<b>4.4 • 25-30 mins</b>
+						</p>
+						<p style="font-size:18px;color:grey;padding-left:6%;">
+							Burgers, Beverages, Cafe, Desserts 
+						</p>
+					</div>
+					<div class="div3">
+					
+						<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/buo4zj6a4deipui9dv3l"style="height:200px;width:300px;object-fit:cover;object-position:10%  35%;margin-left:1%;margin-top:1%;">
+						<p style="font-size:30px;color:#393939;margin-top:2%;padding-left:6%;">
+							<b>Monginis </b>
+						</p>
+						<p style="font-size:20px;padding-left:6%;">
+							<b>4.2 • 35-40 mins</b>
+						</p>
+						<p style="font-size:18px;color:grey;padding-left:6%;">
+							BakeryHinjewadi
+						</p>
+					</div>
+					
+					
+				<div style="font-size:30px;margin-left:5%;margin-top:30%;">
+					<b>Top restaurant chains in Pune</b>
+				</div>
+				
+					<div class="div">
+						<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/91afd7c438fcf1a3b55b97c2fbaa1cfa"style="height:200px;width:300px;object-fit:cover;object-position:60%  60%;margin-left:1%;">
+						<p style="font-size:30px;color:#393939;margin-top:2%;padding-left:6%;">
+							<b>Radha Krishna Pure</b>
+						</p>
+						<p style="font-size:20px;padding-left:6%;">
+							<b>4 • 25-30 mins</b>
+						</p>
+						<p style="font-size:18px;color:grey;padding-left:6%;">
+							North Indian, Chinese Hinjawadi
+						</p>
+					</div>
+					<div class="div1">
+					
+						<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/a2az5iws5kuyi7npu4kd"style="height:200px;width:300px;object-fit:cover;object-position:120%  50%;margin-left:1%;margin-top:1%;">
+						<p style="font-size:30px;color:#393939;margin-top:2%;padding-left:6%;">
+							<b>Varuna Pure Veg</b>
+						</p>
+						<p style="font-size:20px;padding-left:6%;">
+							<b>4 • 30-35 mins</b>
+						</p>
+						<p style="font-size:18px;color:grey;padding-left:6%;">
+							North Indian, Punjabi, Chinese, 
+						</p>
+					</div>
+					<div class="div1">
+					
+						<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/noc7ieivirqxtpujhsgl"style="height:200px;width:300px;object-fit:cover;object-position:10%  35%;margin-left:1%;margin-top:1%;">
+						<p style="font-size:30px;color:#393939;margin-top:2%;padding-left:6%;">
+							<b>UBQ by Barbeque </b>
+						</p>
+						<p style="font-size:20px;padding-left:6%;">
+							<b>4 • 50-55 mins</b>
+						</p>
+						<p style="font-size:18px;color:grey;padding-left:6%;">
+							North Indian, Barbecue, Biryani, 
+						</p>
+					</div>
+					<div class="div1">
+					
+						<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/iydxtay1mnne2ktw7txe"style="height:200px;width:300px;object-fit:cover;object-position:10%  70%;margin-left:1%;margin-top:1%;">
+						<p style="font-size:30px;color:#393939;margin-top:2%;padding-left:6%;">
+							<b>Barbeque Nation </b>
+						</p>
+						<p style="font-size:20px;padding-left:6%;">
+							<b>3.7 • 60-65 mins</b>
+						</p>
+						<p style="font-size:18px;color:grey;padding-left:6%;">
+							North Indian, Barbecue, Biryani, 
+							
+						</p>
+					</div>
+				
+				
+				
+					<div style="font-size:30px;margin-left:5%;margin-top:30%;">
+						<b>Best Places to Eat Across Cities	</b>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:18px;">
+						Best Restaurants in Jaipur 
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Best Restaurants in Kolkata
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Best Restaurants in Bangalore
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Best Restaurants in Chennai
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Best Restaurants in Pune 
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Best Restaurants in Delhi
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Best Restaurants in Nagpur
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Best Restaurants in Mumbai 
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Best Restaurants in Chandigarh 
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Best Restaurants in Ahmedabad
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Best Restaurants in Hyderabad
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Show More
+					</p>
+				</div>
+				<div style="font-size:30px;margin-left:5%;margin-top:18%;">
+						<b>Best Cuisines Near Me</b>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:18px;">
+						Chinese Restaurants near me
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						South Indian Restaurants near me
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Indian Restaurants near me
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Kerala Restaurants near me
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Andhra Restaurants near me
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Punjabi Restaurants near me
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Seafood Restaurants near me
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						North Indian Restaurants near me
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Bengali Restaurants near me
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Korean Restaurants near me
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Italian Restaurants near me
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:300px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:3%;font-size:20px;">
+						Show More
+					</p>
+				</div>
+				<div style="font-size:30px;margin-left:5%;margin-top:18%;">
+						<b>Explore Every Restaurants Near Me</b>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:600px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:1%;font-size:20px;">
+						Explore Restaurants near me
+					</p>
+				</div>
+				<div style="border:1px solid grey;height:35px;width:600px;border-radius:5%;margin-left:4%;margin-top:1.5%;float:left;">
+					<p style="text-align:center;margin-top:1%;font-size:18px;">
+						Explore Top Rated Restaurants near me 
+					</p>
+				</div>	
+				<div style="background-color:lightgrey;margin-top:10%;font-size:30px;padding:2%;">
+					<b>For better experience,download the Swiggy app now</b>
+				<span>
+					<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/play_store.png"style="width:15%;margin-left:5%;">
+				</span>
+				<span>
+					<img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/app_store.png"style="width:15%;margin-left:2%;">
+				</span>
+				</div>
+				<div style="padding:5%;background-color:black;">
+		<p style="font-size:30px;margin-top:0%;">
+			<b style="color:white;">Swiggy</b>
+		<span style="font-size:20px;color:white;">
+			<img src="data:image/png;base64,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"style="width:2%;margin-left:70%;">
+			India▾
+		</span>
+		<span style="font-size:20px;color:white;">
+			<img src="https://www.svgrepo.com/show/348179/language.svg"style="width:1.5%;">
+				English▾
+		</span>
+		
+		</p>
+		
+		<div style="margin-top:2.5%;font-size:18px;color:white;">
+			ABOUT SWIGGY
+		
+		<span style="margin-left:10%">
+			ZOMAVERSE
+		</span>
+		<span style="margin-left:10%">
+			FOR RESTAURANT
+		</span>
+		<span style="margin-left:10%">
+			LEARN    MORE
+		</span>
+		<span style="margin-left:10%">
+			SOCIAL LINKS
+		</span>
+		</div>
+		<div style="font-size:18px;color:grey;margin-top:1.5%;">
+			Who We Are
+		<span style="font-size:18px;color:grey;margin-top:1.5%;margin-left:13.5%;">
+			Swiggy
+		</span>
+		<span style="font-size:18px;color:grey;margin-top:1.5%;margin-left:14%;">
+			Partner With Us
+		</span>
+		<span style="font-size:18px;color:grey;margin-top:1.5%;margin-left:13%;">
+			Privacy
+		</span>
+		<span style="font-size:18px;color:grey;margin-top:1.5%;margin-left:13%;">
+			<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQzlKFs0_7QU7SQOh9M9B20QmDNU0RFhlCer-3SMslQvvsWp3Ee"style="width:10%;">
+		</span>
+		</div>
+		
+		<p style="font-size:18px;color:grey;margin-top:0.5%;">
+			Blog
+		<span style="font-size:18px;color:grey;margin-top:0.5;margin-left:17.8%;">
+			Blinkit
+		</span>
+		<span style="font-size:18px;color:grey;margin-top:0.5%;margin-left:14.5%;">
+			App For You
+		</span>
+		<span style="font-size:18px;color:grey;margin-top:0.5%;margin-left:14.5%;">
+			Security
+		</span>
+		<span style="font-size:18px;color:grey;margin-left:13%;">
+			<img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png"style="width:5%;">
+		</span>
+		
+		</p>
+		<p style="font-size:18px;color:grey;margin-top:0.5%;">
+			Work With Us
+		<span style="font-size:18px;color:grey;margin-top:0.5;margin-left:12.5%;">
+			Fleeding
+		</span>
+		<span style="font-size:18px;color:grey;margin-top:0.5%;margin-left:14%;">
+			App For You
+		</span>
+		<span style="font-size:18px;color:grey;margin-top:0.5%;margin-left:14.5%;">
+			Terms
+		</span>
+		<span style="font-size:18px;color:grey;margin-left:14%;">
+			<img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png"style="width:5%;">
+		</span>
+		</p>
+		<p style="font-size:18px;color:grey;margin-top:0.5%;">
+			Investor Relation
+		<span style="font-size:18px;color:grey;margin-top:0.5;margin-left:11%;">
+			Hyperpure
+		</span>
+		<span style="font-size:18px;color:grey;margin-top:0.5%;margin-left:13%;">
+			App For You
+		</span>
+		<span style="font-size:18px;color:grey;margin-top:0.5%;margin-left:14.5%;">
+			Sitemap
+		</span>
+		</p>
+		<p style="font-size:18px;color:grey;margin-top:0.5%;">
+			Report Fraud
+			<span style="font-size:18px;color:grey;margin-top:0.5;margin-left:13%;">
+			Zomaland
+		</span>
+		</p>
+		<p style="font-size:18px;color:grey;margin-top:0.5%;">
+			Press Kit
+		</p>
+		<p style="font-size:18px;color:grey;margin-top:0.5%;">
+			Contact Us
+		</p>
+		<br>
+		<hr>
+		<p style="margin-top:2%;color:grey;">
+			By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Zomato™ Ltd. All rights reserved.
+		</p>
+		</div>
+				
+				
+					
+			
+	</body>
+</html>
